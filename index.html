@@ -2,101 +2,185 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>drip27</title>
+  <title>Order 27 Cafe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- フォント（後で差し替えOK） -->
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
+  <!-- フォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-body {
-  margin: 0;
-  font-family: 'Zen Kaku Gothic New', sans-serif;
-  background-image: url("images/interior.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: #3a2f2a;
-}
-.wrapper {
-  min-height: 100vh;
-  max-width: 720px;
-  margin: auto;
-  background-color: rgba(244, 241, 236, 0.88);
-  border-radius: 20px;
-  padding: 2rem 1.5rem 3rem;
-  text-align: center;
-}
+    body {
+      margin: 0;
+      font-family: 'Zen Kaku Gothic New', sans-serif;
+      background-image: url("images/interior.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #3a2f2a;
+    }
+
+    .wrapper {
+      min-height: 100vh;
+      max-width: 640px;
+      margin: auto;
+      background-color: rgba(244, 241, 236, 0.92);
+      border-radius: 20px;
+      padding: 2.5rem 1.5rem 3rem;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .header {
+      margin-bottom: 2.5rem;
+    }
+
+    .header-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 1.2rem;
+      opacity: 0.95;
+    }
 
     h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      margin: 0 0 0.4rem;
     }
 
     .subtitle {
-      font-size: 0.9rem;
-      opacity: 0.8;
-      margin-bottom: 3rem;
+      font-size: 0.85rem;
+      opacity: 0.75;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
     }
 
-    nav a {
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      color: #7a6b63;
+      margin: 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background-color: #7a6b63;
+      opacity: 0.5;
+    }
+
+    /* Portfolio リンク */
+    .portfolio-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .portfolio-item {
       display: block;
-      margin: 0.8rem 0;
+      padding: 1rem 1.2rem;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(210, 200, 190, 0.5);
+      border-radius: 10px;
       text-decoration: none;
       color: #3a2f2a;
-      font-size: 1rem;
-      transition: opacity 0.3s;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
     }
 
-    nav a:hover {
-      opacity: 0.6;
+    .portfolio-item:hover {
+      background: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
-.header {
-  margin-bottom: 2.5rem;
-}
 
-.header-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 14px;
-  margin-bottom: 1.2rem;
-  opacity: 0.95;
-}
+    /* About 白枠カード */
+    .about-card {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      padding: 1.5rem 1.8rem;
+      border: 1px dashed #d5ccc4;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      text-align: left;
+      line-height: 1.8;
+      font-size: 0.9rem;
+    }
+
+    .about-card p {
+      margin: 0 0 0.8rem;
+    }
+
+    .about-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-note {
+      font-size: 0.78rem;
+      color: #786c65;
+      border-top: 1px solid #eae5e1;
+      padding-top: 0.8rem;
+      margin-top: 0.8rem;
+    }
+
     footer {
-      position: fixed;
-      bottom: 1rem;
+      margin-top: 3rem;
       font-size: 0.75rem;
-      opacity: 0.6;
+      opacity: 0.5;
+      letter-spacing: 0.08em;
     }
   </style>
 </head>
 
 <body>
 
-
-
   <div class="wrapper">
-<header class="header">
-  <img src="counter.jpg" alt="cafe counter" class="header-img">
-  <h1>drip27</h1>
-  <div class="subtitle">
-    a quiet coffee-like space on the web
-  </div>
-</header>
+    <header class="header">
+      <img src="counter.jpg" alt="cafe counter" class="header-img">
+      <h1>Order 27 Cafe</h1>
+      <div class="subtitle">
+        a quiet coffee-like space on the web
+      </div>
+    </header>
 
-    <nav>
-      <a href="#">Gallery</a>
-      <a href="#">BGM</a>
-      <a href="#">Words</a>
-      <a href="#">About</a>
-    </nav>
+    <main>
+      <div class="section-title">PORTFOLIO</div>
+      <div class="portfolio-list">
+         <a href="https://27cafe.github.io/in27/" target="_blank" class="portfolio-item">
+          「portfolio in 27」イラスト作品アーカイブ
+        </a>
+        <a href="https://27cafe.github.io/pokoa/" target="_blank" class="portfolio-item">
+          「ぽこあポケモン」アイテムデータベース
+        </a>
+        <a href="https://27cafe.github.io/mercari-calc/" target="_blank" class="portfolio-item">
+          「メルカリ」利益計算機
+        </a>
+      </div>
+
+      <div class="section-title">ABOUT</div>
+      <div class="about-card">
+        <p>Order 27 Cafeは、個人の趣味で運営しているウェブサイトです。</p>
+        <p>ここでは、個人で作成したウェブサービスや、趣味で作った作品などを公開しています。もし気に入った作品がありましたら、ぜひご利用ください。</p>
+        <div class="about-note">
+          ※当サイトのコンテンツは、個人の趣味で作成したものであり、商用利用や営利目的での使用はご遠慮ください。
+        </div>
+      </div>
+    </main>
 
     <footer>
       open quietly
     </footer>
   </div>
+
 </body>
 </html>
